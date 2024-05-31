@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 
-
+//code review
 public class Testcase101 {
 
 	public static void main(String[] args) throws InterruptedException, AWTException {
@@ -21,7 +21,7 @@ public class Testcase101 {
 		driver.get("https://interview.supporthive.com/staff/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.findElement(By.id("id_username")).sendKeys("Agent");
+		driver.findElement(By.id("id_username")).sendKeys("Agent");  //code review
 		driver.findElement(By.id("id_password")).sendKeys("Agent@123");
 		driver.findElement(By.id("btn-submit")).click();
 		WebElement tickets = driver.findElement(By.id("ember29"));
@@ -36,7 +36,7 @@ public class Testcase101 {
 		          statusColourSelect.click();
 
 		          WebElement statusColourEnter =
-		          driver.findElement(By.xpath("//input[@class='sp-input']"));
+		          driver.findElement(By.xpath("//input[@class='sp-input']"));//code review
 		          statusColourEnter.clear(); statusColourEnter.sendKeys("#47963f");
 
 		          Robot r = new Robot();
@@ -55,7 +55,7 @@ public class Testcase101 {
 		WebElement addCreate = driver.findElement(By.xpath("//button[@class ='hf-entity-footer_primary hf-primary-action ember-view']"));
 	      addCreate.click();
 
-	      Thread.sleep(3000);
+	      Thread.sleep(3000); // code review
 
 	      WebElement moveTo = driver.findElement(By.xpath("//td[@class ='lt-cell align-center hf-mod-no-padding ember-view']"));
 	      action.moveToElement(moveTo).build().perform();
@@ -82,7 +82,7 @@ WebElement tickets2 = driver.findElement(By.id("ember29"));
 action.moveToElement(tickets2).build().perform();
 WebElement priorities2 = driver.findElement(By.linkText("Priorities"));
 priorities2.click();
-driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); //code review
 driver.findElement(By.xpath("/html[1]/body[1]/div[3]/div[1]/section[1]/section[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[9]/td[2]")).click();
 driver.findElement(By.linkText("Delete")).click();
 WebElement delete = driver.findElement(By.cssSelector("button[data-test-id='delete-dependants-primary-action']"));
@@ -106,7 +106,7 @@ public class PagesforAutomationAssignment {
 
         driver.quit();
     }
-
+//code review
     static class BasePage {
         protected WebDriver driver;
 
@@ -139,7 +139,7 @@ public class PagesforAutomationAssignment {
 
         public void verifyHomePage() {
             if (!driver.getCurrentUrl().equals("https://www.happyfox.com/home")) {
-                throw new IllegalStateException("Not on the home page");
+                throw new IllegalStateException("Not on the home page"); //code review
             }
         }
 
